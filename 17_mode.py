@@ -11,12 +11,13 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    # look at rithm solution
 
     freqs = {}
 
     for num in nums:
-        freqs[num] = freqs.get(num, 0)
-        freqs[num] += 1
+        freqs[num] = freqs.get(num, 0) + 1
+        # freqs[num] += 1
 
     highest_val = 0
     highest_num = 0

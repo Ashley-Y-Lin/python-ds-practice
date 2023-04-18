@@ -20,6 +20,11 @@ def partition(lst, fn):
         [['hi', 'bye'], [None, 6]]
     """
 
+    # pass_f = []
+    # fail_f = []
+
+    # can just loop through lst normally and append accordingly
+
     pass_fn = [item for item in lst if fn(item)]
 
     fail_fn = [item for item in lst if not fn(item)]

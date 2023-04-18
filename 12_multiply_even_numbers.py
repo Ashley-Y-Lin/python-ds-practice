@@ -12,10 +12,13 @@ def multiply_even_numbers(nums):
         >>> multiply_even_numbers([1, 3, 5])
         1
     """
+    # add spaces around operators in Python, except something about flask
+
     out = 1
 
-    evens = [num for num in nums if num%2 == 0]
+    evens = [num for num in nums if num % 2 == 0]
+
     for num in evens:
-        out = out*num
+        out = out * num
 
     return out

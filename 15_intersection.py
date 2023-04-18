@@ -13,6 +13,9 @@ def intersection(l1, l2):
         >>> intersection([1, 2, 3], [4, 5, 6])
         []
     """
+
+    # TODO: do w list comprehension
+
     intersection = []
 
     for num in l1:

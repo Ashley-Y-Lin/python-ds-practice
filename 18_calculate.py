@@ -28,6 +28,7 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
           ...
         ValueError: Invalid Operation
     """
+    #not sure if we should keep all logic in if block, or guard at beginning
 
     valid_operations = ["add", "subtract", "multiply", "divide"]
 
@@ -42,10 +43,12 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         result = a - b
     elif operation == "multiply":
         result = a * b
-    else:
+    elif operation == "divide":
         result = a / b
+    else:
+        #valueError
 
     if (make_int):
         return f"{message} {int(result)}"
-    else:
-        return f"{message} {result}"
+
+    return f"{message} {result}"

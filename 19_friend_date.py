@@ -16,7 +16,9 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
-    hobbies_1 = a[2]
+    # there are functions to turn data structures into diff ones
+
+    hobbies_1 = set(a[2])
     hobbies_2 = b[2]
 
     for hobby in hobbies_1:
