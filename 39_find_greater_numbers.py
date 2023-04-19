@@ -18,13 +18,22 @@ def find_greater_numbers(nums):
 
         >>> find_greater_numbers([])
         0
-        
+
     Make sure original list has not been mutated:
-    
+
         >>> nums = [4, 5, 6]
         >>> find_greater_numbers(nums)
         3
-        
+
         >>> nums == [4, 5, 6]
         True
     """
+
+    count = 0
+
+    for start in range(len(nums)):
+        for end in range(start + 1, len(nums)):
+            if nums[end] > nums[start]:
+                count += 1
+
+    return count

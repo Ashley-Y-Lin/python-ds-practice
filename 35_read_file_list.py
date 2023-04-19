@@ -8,7 +8,7 @@ def read_file_list(filename):
 
     This should work:
 
-        >>> read_file_list("dogs")
+        >>> read_file_list("dogs.txt")
         - Fido
         - Whiskey
         - Dr. Sniffle
@@ -19,3 +19,13 @@ def read_file_list(filename):
     # hint: when you read lines of files, there will be a "newline"
     # (end-of-line character) at the end of each line, and you want to
     # strip that off before you print it. Do some research on that!
+
+    try:
+        f = open(filename, "r")
+    except:
+        raise FileNotFoundError(f"[Errno 2] No such file or directory: '{filename}'")
+
+    f_lines = f.readlines()
+
+    for line in f_lines:
+        print(f"- {line.strip()}")

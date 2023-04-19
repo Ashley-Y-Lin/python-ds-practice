@@ -15,7 +15,16 @@ def find_the_duplicate(nums):
         True
 
     Make sure original list has not been mutated:
-    
+
         >>> nums == [2, 1, 3, 4]
         True
     """
+    seen = []
+
+    for num in nums:
+        if num in seen:
+            return num
+        else:
+            seen.append(num)
+
+    return None

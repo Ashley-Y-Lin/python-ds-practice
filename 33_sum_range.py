@@ -28,3 +28,7 @@ def sum_range(nums, start=0, end=None):
         >>> nums == [1, 2, 3, 4]
         True
     """
+    if end == None or end > len(nums):
+        return sum(nums[start:])
+    else:
+        return sum(nums[start : end + 1])
